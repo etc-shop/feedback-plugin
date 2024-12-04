@@ -129,8 +129,6 @@
 
       <a
         class="btn btn-primary btn-appearance"
-        data-toggle="modal"
-        href="#login"
         @click="createLoginModal()"
       >
         <span>{{ $translate("Feedback::Feedback.login") }}</span>
@@ -225,7 +223,7 @@ export default {
     },
 
     createLoginModal () {
-      this.$store.dispatch('loadComponent', 'login-modal')
+      $('#loginModalWrapper').addClass('open-modal-left')
     }
   }
 }
